@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Book</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Georgia", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(120deg, #f6d365, #fda085);
+        }
+
+        .storybook {
+            width: 90%;
+            max-width: 1000px;
+            max-height: 2000px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: #ffb347;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .pages {
+            position: relative;
+            height: 550px;
+            overflow: hidden;
+        }
+
+        .page {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 25px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+
+        input[type="radio"] {
+            display: none;
+        }
+
+
+        #p1:checked~.pages .page1,
+        #p2:checked~.pages .page2,
+        #p3:checked~.pages .page3,
+        #p4:checked~.pages .page4,
+        #p5:checked~.pages .page5,
+        #p6:checked~.pages .page6,
+        #p7:checked~.pages .page7 {
+            opacity: 1;
+        }
+
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            background: #fff3e0;
+        }
+
+        .nav label {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #bbb;
+            margin: 0 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input#p1:checked~.nav label[for="p1"],
+        input#p2:checked~.nav label[for="p2"],
+        input#p3:checked~.nav label[for="p3"],
+        input#p4:checked~.nav label[for="p4"],
+        input#p5:checked~.nav label[for="p5"],
+        input#p6:checked~.nav label[for="p6"],
+        input#p7:checked~.nav label[for="p7"] {
+            background: #ff7043;
+            transform: scale(1.2);
+        }
+
+
+        .page h2 {
+            margin-bottom: 15px;
+            color: #ff7043;
+        }
+
+        .page p {
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="storybook">
+        <header>Faraday: The Spark of Innovation</header>
+
+
+        <input type="radio" id="p1" name="page" checked>
+        <input type="radio" id="p2" name="page">
+        <input type="radio" id="p3" name="page">
+        <input type="radio" id="p4" name="page">
+        <input type="radio" id="p5" name="page">
+        <input type="radio" id="p6" name="page">
+        <input type="radio" id="p7" name="page">
+
+
+        <div class="pages">
+            <div class="page page1">
+                <p>"Nothing is too wonderful to be true, if it be consistent with the laws of nature"</p>
+                <img src="Faraday-Millikan-Gale-1913.jpg" height="400">
+            </div>
+
+            <div class="page page2">
+                <h2>The Dawn</h2>
+                <p>Michael Faraday was born on September 22 1791, in the country village of Newington, Surrey. His
+                    father was a blacksmith who had migrated from the north of England earlier in 1791 to look for work.
+                    His mother was a country woman of great calm and wisdom who supported her son emotionally through a
+                    difficult childhood. </p>
+                <img src="1.jpg" height="250">
+            </div>
+
+            <div class="page page3">
+                <h2>Path to Knowledge</h2>
+                <p>At the age of 14, he became an apprentice to George Riebau, a local bookbinder and bookseller in
+                    Blandford Street. During his seven-year apprenticeship Faraday read many books, including Isaac
+                    Watts's The Improvement of the Mind, and he enthusiastically implemented the principles and
+                    suggestions contained therein.</p>
+            </div>
+
+            <div class="page page4">
+                <h2>Scientific Milestones</h2>
+                <img src="inventions.jpg" alt="">
+            </div>
+
+            <div class="page page5">
+                <h2>Homopolar generator (1831)</h2>
+                <p>A homopolar generator is a DC electrical generator comprising an electrically conductive disc or
+                    cylinder rotating in a plane perpendicular to a uniform static magnetic field.</p>
+                <img src="Faraday_disk_generator.jpg" height="250">
+            </div>
+
+
+            <div class="page page6">
+                <h2>Faraday Cage (1836)</h2>
+                <p>The Faraday Cage is an apparatus that forms a protective shell around objects in order to protect
+                    them from electromagnetic fields generated by electric currents. The exterior of the cage uses
+                    conductive material to help evenly distribute electrical fields around the entire cage, while the
+                    inside remains free from any electrical interference. It is currently used in cellular technology
+                    and hospitals, such as rf blocking devices and protective suits used by individuals exposed to
+                    radiation.</p>
+                <img src="faraday_cage1.jpg" alt="Faraday Cage" height="250">
+            </div>
+
+            <div class="page page7">
+                <h2>Awards</h2>
+            
+                    <p>Copley Medal</p>
+                   
+                    <p>Royal Medal</p>
+                    <p>Rumford Medal </p>
+                    <p>Albert Medal</p>
+                    <p>Royal Society Bakerian Medal</p>
+                
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="nav">
+            <label for="p1"></label>
+            <label for="p2"></label>
+            <label for="p3"></label>
+            <label for="p4"></label>
+            <label for="p5"></label>
+            <label for="p6"></label>
+            <label for="p7"></label>
+        </div>
+    </div>
+</body>
+
+</html>
